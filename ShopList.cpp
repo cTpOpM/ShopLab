@@ -3,3 +3,17 @@
 //
 
 #include "ShopList.h"
+
+void ShopList::addList(std::string n, std::unique_ptr<List>) {
+
+}
+
+void ShopList::removeList(std::string n) {
+
+}
+
+void ShopList::showList() {
+
+}
+
+

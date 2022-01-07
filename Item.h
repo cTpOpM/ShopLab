@@ -13,9 +13,15 @@ public:
         category = "TODO";
     }
 
+    void printCharacteristics() {
+        std::cout << "name->" << name << std::endl;
+        std::cout << "category->" << category << std::endl;
+    }
+
 private:
     std::string name;
     std::string category;
+    int quantity;
 };
 
 
