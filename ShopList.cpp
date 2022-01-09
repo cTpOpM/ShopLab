@@ -4,16 +4,18 @@
 
 #include "ShopList.h"
 
-void ShopList::addList(std::string n, std::unique_ptr<List>) {
-
+void ShopList::addList(List *list) {
+    shopL.push_back(list);
 }
 
-void ShopList::removeList(std::string n) {
+[[maybe_unused]] void ShopList::removeList(const std::string &n) {
 
 }
 
 void ShopList::showList() {
-
+    for (auto &itr: shopL) {
+        itr->showItems();
+    }
 }
 
 

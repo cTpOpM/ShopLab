@@ -22,8 +22,8 @@ public:
     void showLists();
 
 private:
-    std::string name;
-    std::string email;
+    [[maybe_unused]] std::string name;
+    [[maybe_unused]] std::string email;
     ShopList *list;
 };
 

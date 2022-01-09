@@ -5,25 +5,23 @@
 #ifndef SHOPLAB_SHOPLIST_H
 #define SHOPLAB_SHOPLIST_H
 
-#include <vector>
+#include <list>
 #include <memory>
 #include "Item.h"
 #include "List.h"
 
 class ShopList {
 public:
-    ShopList() {
-        shopL.clear();
-    }
+    ShopList() = default;
 
-    void removeList(std::string n);
+    [[maybe_unused]] void removeList(const std::string &n);
 
-    void addList(std::string n, std::unique_ptr<List>);
+    void addList(List *list);
 
     void showList();
 
 private:
-    std::vector<std::unique_ptr<List>> shopL;
+    std::list<List *> shopL;
 };
 
 

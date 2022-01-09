@@ -6,16 +6,18 @@
 #define SHOPLAB_ITEM_H
 
 #include <iostream>
+#include <utility>
 
 class Item {
 public:
-    Item(std::string n) : name(n) {
+    explicit Item(std::string n = "nothing here", int q = 0) : name(std::move(n)), quantity(q) {
         category = "TODO";
     }
 
     void printCharacteristics() {
         std::cout << "name->" << name << std::endl;
         std::cout << "category->" << category << std::endl;
+        std::cout << "quantity " << quantity << std::endl;
     }
 
 private:

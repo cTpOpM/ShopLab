@@ -3,3 +3,23 @@
 //
 
 #include "List.h"
+
+void List::addLItem(Item *it) {
+    L.push_back(it);
+}
+
+[[maybe_unused]] const std::string &List::getName() const {
+    return name;
+}
+
+[[maybe_unused]] void List::setName(const std::string &name) {
+    List::name = name;
+}
+
+void List::showItems() {
+    std::cout << name << std::endl;
+    for (auto &itr: L) {
+        itr->printCharacteristics();
+    }
+}
+
