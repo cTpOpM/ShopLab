@@ -6,28 +6,46 @@
 
 #include <memory>
 
-void User::userInterface() {
+void User::ListCreator() {
     std::cout << "////////TODO////////" << std::endl;
-    std::string n;
-    std::string i;
-    int q;
+    std::string listName;
+    std::string ItemName;
+    int quantity;
     std::cout << "create a list? name->";
-    std::cin >> n;
+    std::cin >> listName;
     int end = 1;
-    List a(n);
+    List temporary(listName);
     std::cout << "now insert the items and the quantity" << std::endl;
     while (end != 0) {
         std::cout << "name->";
-        std::cin >> i;
+        std::cin >> ItemName;
         std::cout << "quantity->";
-        std::cin >> q;
-        a.addLItem(new Item(i, q));
+        std::cin >> quantity;
+        temporary.addLItem(new Item(ItemName, quantity));
         std::cout << "to end digit 0";
         std::cin >> end;
     }
-    list->addList(&a);
+    list->addList(temporary);
 }
 
 void User::showLists() {
     list->showList();
 }
+
+void User::ShowSpecificList(const std::string &listName) {
+    list->showSpecificList(listName);
+}
+
+void User::ShowNameOfLists() {
+
+}
+
+void User::InterfaceList(const std::string &listName) {
+
+}
+
+void User::UserInterface() {
+
+}
+
+

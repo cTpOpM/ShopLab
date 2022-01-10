@@ -14,6 +14,7 @@
 class List {
 public:
     explicit List(std::string n) : name(std::move(n)) {}
+    ~List() = default;
 
     void addLItem(Item *it);
 

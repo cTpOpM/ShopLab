@@ -12,8 +12,8 @@ void List::addLItem(Item *it) {
     return name;
 }
 
-[[maybe_unused]] void List::setName(const std::string &name) {
-    List::name = name;
+[[maybe_unused]] void List::setName(const std::string &n) {
+    List::name = n;
 }
 
 void List::showItems() {
@@ -22,4 +22,5 @@ void List::showItems() {
         itr->printCharacteristics();
     }
 }
+
 

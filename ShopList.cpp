@@ -4,7 +4,7 @@
 
 #include "ShopList.h"
 
-void ShopList::addList(List *list) {
+void ShopList::addList(const List &list) {
     shopL.push_back(list);
 }
 
@@ -14,7 +14,16 @@ void ShopList::addList(List *list) {
 
 void ShopList::showList() {
     for (auto &itr: shopL) {
-        itr->showItems();
+        itr.showItems();
+    }
+}
+
+void ShopList::showSpecificList(const std::string &listName) {
+    for (auto &itr: shopL) {
+        if (itr.getName() == listName) {
+            std::cout << itr.getName() << std::endl;
+            itr.showItems();
+        }
     }
 }
 

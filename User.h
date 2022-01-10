@@ -17,14 +17,23 @@ public:
         list = new ShopList;
     }
 
-    void userInterface();
+    void ListCreator();
 
     void showLists();
+
+    void ShowSpecificList(const std::string &listName);
+
+    void InterfaceList(
+            const std::string &listName);//TODO has to modify the list, so you can add, remove or modify the quantity of an item or remove a list or change the name of a list or copy a list
+
+    void ShowNameOfLists();//TODO has to show all the names of the lists
+
+    void UserInterface();//TODO has all the methods that a User can invoke
 
 private:
     [[maybe_unused]] std::string name;
     [[maybe_unused]] std::string email;
-    ShopList *list;
+    ShopList *list; //TODO try to change raw pointers to smart pointers
 };
 
 

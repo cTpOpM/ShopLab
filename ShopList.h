@@ -14,14 +14,17 @@ class ShopList {
 public:
     ShopList() = default;
 
+    ~ShopList() = default;
+
     [[maybe_unused]] void removeList(const std::string &n);
 
-    void addList(List *list);
+    void addList(const List &list);
 
     void showList();
 
+    void showSpecificList(const std::string &listName);
 private:
-    std::list<List *> shopL;
+    std::list<List> shopL;
 };
 
 
